@@ -1,0 +1,147 @@
+:root {
+  --fuentePrincipal: 'Oswald', sans-serif;
+  --fuenteSecundaria: 'Ubuntu', sans-serif;
+  --primario: #194350;
+  --bg: #d1eecc;
+  --secundario: #ffffff;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--fuentePrincipal);
+  margin: 0;
+}
+
+body {
+  background: var(--primario);
+  line-height: 2;
+  font-size: 1.8rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+
+/** GLOBALES **/
+
+.contenedor {
+  max-width: 750px;
+  margin: 5px;
+}
+
+.section {
+  padding: 5px 5px;
+  line-height: 1.5;
+}
+
+.hr {
+  width: 50%;
+  height: 1px;
+  border-bottom: solid 3px var(--primario);
+}
+
+.clrFX {
+  content: '';
+  clear: both;
+  display: block;
+}
+
+@media (min-width:764px) {
+  .hr {
+    width: 12.5%;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  p {
+    font-family: 'PT Sans', sans-serif;
+  }
+
+  .clrFX {
+    content: '';
+    clear: both;
+    display: block;
+  }
+}
+
+
+.contenedor-cal {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  background-color: var(--primario);
+}
+
+.header {
+  font-size: 35px;
+  font-family: 'Luckiest Guy', cursive;
+  text-shadow: 0 2px 3px rgba(15, 15, 15, 0.507);
+}
+
+.contenido {
+  border: #ffffff 3px solid;
+  padding: 10px;
+  width: 100%;
+  border-radius: 10px;
+  background-color: #9dbeb9;
+  height: 100%;
+}
+
+.contenido h2 {
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+
+.controladores {
+  text-align: center;
+}
+
+input[type=text] {
+  color: #ffffff;
+  padding: 12px 20px;
+  border-radius: 10px;
+  width: 50%;
+  background-color: var(--primario);
+  font-family: var(--fuenteSecundaria);
+}
+
+
+.main-container {
+  display: flex;
+  justify-content: center;
+}
+
+#main {
+  font-family: var(--fuenteSecundaria);
+  color: #ffffff;
+  text-align: center;
+}
+
+.btn {
+  border: var(--primario) 1px solid;
+  border-radius: 5px;
+}
+
+.footer {
+  text-align: center;
+  font-size: 1rem;
+  font-family: var(--fuenteSecundaria);
+}
+
+.cc {
+
+}

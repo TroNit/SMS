@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta http-equiv="ScreenOrientation" content="autoRotate:disable">
+  <title>Estimate my Sh!t</title>
+  <link rel="icon" href="favicon.ico">
+  <script src="https://kit.fontawesome.com/d79ab621e3.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Luckiest+Guy&family=Oswald&family=PT+Sans:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+
+
+  <div class="contenedor-cal">
+
+    <div class="contenido">
+      <h1 class="header">ESTIMATE MY SH!T...</h1>
+      
+
+      <h2>How much is the job?</h2>
+
+      <input type="text" id="precio" type="number" placeholder="$">
+
+      <h2>SQfeet of the job?</h2>
+
+      <input type="text" id="pies2" type="number" placeholder="#">
+
+      <h2>How many installers?</h2>
+
+      <input type="text" id="instaladores" type="number" placeholder="#">
+
+      <h2>How many days?</h2>
+
+      <input type="text" id="dias" type="number" placeholder="#">
+
+
+
+      <div class="controladores">
+        <button class="btn" onclick="sunControl()">Estimate for Sun Control</button>
+        <button class="btn" onclick="safety()">Estimate for Safety</button>
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="main-container">
+    <h3 id="main"></h3>
+  </div>
+
+  <div class="footer">
+    <p>Created it by J <span>E</span> Development.</p>
+    <p class="cc">
+      all Right Reserved - Estimate my sh!t 2021
+    </p>
+  </div>
+
+
+
+
+  <script>
+    function sunControl() {
+      var precioTrabajo = document.getElementById("precio").value;
+      var vendedor = precioTrabajo * 10 / 100;
+      precioTrabajo = precioTrabajo - vendedor;
+      var instalador = precioTrabajo * 15 / 100;
+      var numeroInstallers = document.getElementById("instaladores").value;
+      if (numeroInstallers >= 0) {
+        instalador = instalador / numeroInstallers;
+      };
+      var days = document.getElementById("dias").value;
+      if (days > 1) {
+        days = instalador / days;
+        document.getElementById('main').innerHTML = "Your Estimate Payment is $ " + instalador.toPrecision(5) +
+          " and " +
+          days.toPrecision(5) + " Daily";
+      } else if (days <= 1) {
+        document.getElementById('main').innerHTML = "Your Estimate Payment is $ " + instalador.toPrecision(5);
+      }
+    }
+
+    function safety() {
+      var precioTrabajo = document.getElementById("precio").value;
+      var vendedor = precioTrabajo * 10 / 100;
+      precioTrabajo = precioTrabajo - vendedor;
+      var instalador = precioTrabajo * 18 / 100;
+      var sqf = document.getElementById("pies2").value;
+      sqf = sqf * 7 / 5 * 0.25;
+      instalador = instalador + sqf;
+      var numeroInstallers = document.getElementById("instaladores").value;
+      if (numeroInstallers > 0) {
+        instalador = instalador / numeroInstallers;
+      };
+      var days = document.getElementById("dias").value;
+      if (days > 1) {
+        days = instalador / days;
+        document.getElementById('main').innerHTML = "Your Estimate Payment is $ " + instalador.toPrecision(5) +
+          " and " +
+          days.toPrecision(5) + " Daily";
+      } else if (days <= 1) {
+        document.getElementById('main').innerHTML = "Your Estimate Payment is $ " + instalador.toPrecision(5);
+      };
+    }
+
+  </script>
+
+
+</body>
+
+</html>
