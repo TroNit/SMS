@@ -108,6 +108,7 @@ img {
 
 .controladores {
   text-align: center;
+  margin-top: 25px;
 }
 
 input[type=text] {
@@ -142,6 +143,15 @@ input[type=text] {
   font-family: var(--fuenteSecundaria);
 }
 
-.cc {
+.add {
+text-align: left;
+margin-left: 300px;
+margin-top: 25px;
+}
 
+
+@media (max-width:768px) {
+  .add {
+    margin-left: 20%;
+  }
 }
