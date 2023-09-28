@@ -75,73 +75,14 @@
   <div class="footer">
     <p>Created it by J <span>E</span> Development.</p>
     <p class="cc">
-      all Right Reserved - Estimate my sh!t 2021
+      all Right Reserved - Estimate my sh!t 2023
     </p>
   </div>
 
 
 
 
-  <script>
-    function sunControl() {
-
-      var precioTrabajo = document.getElementById("precio").value;
-      var vendedor = precioTrabajo * 10 / 100;
-      precioTrabajo = precioTrabajo - vendedor;
-      var instalador = precioTrabajo * 15 / 100;
-      var numeroInstallers = document.getElementById("instaladores").value;
-      if (numeroInstallers >= 0) {
-        instalador = instalador / numeroInstallers;
-      };
-      var sky = document.getElementById("skylites").value;
-      if (sky => 0){
-        sky = sky * 25 / numeroInstallers;
-        instalador = instalador + sky;
-      };
-      var days = document.getElementById("dias").value;
-      if (days > 1) {
-        days = instalador / days;
-        document.getElementById('main').innerHTML = "Your Estimate Payment is $ " + instalador.toPrecision(5) +
-          " and " +
-          days.toPrecision(5) + " Daily";
-      } else if (days <= 1) {
-        document.getElementById('main').innerHTML = "Your Estimate Payment is $ " + instalador.toPrecision(5);
-      };
-    }
-
-    function safety() {
-
-
-      var precioTrabajo = document.getElementById("precio").value;
-      var vendedor = precioTrabajo * 10 / 100;
-      precioTrabajo = precioTrabajo - vendedor;
-      var instalador = precioTrabajo * 18 / 100;
-      var sqf = document.getElementById("pies2").value;
-      sqf = sqf * 7 / 5 * 0.25;
-      instalador = instalador + sqf;
-      var numeroInstallers = document.getElementById("instaladores").value;
-      if (numeroInstallers > 0) {
-        instalador = instalador / numeroInstallers;
-      };
-      var sky = document.getElementById("skylites").value;
-      if (sky => 0){
-        sky = sky * 25 / numeroInstallers;
-        instalador = instalador + sky;
-      }
-
-      var days = document.getElementById("dias").value;
-      if (days > 1) {
-        days = instalador / days;
-        document.getElementById('main').innerHTML = "Your Estimate Payment is $ " + instalador.toPrecision(5) +
-          " and " +
-          days.toPrecision(5) + " Daily";
-      } else if (days <= 1) {
-        document.getElementById('main').innerHTML = "Your Estimate Payment is $ " + instalador.toPrecision(5);
-      };
-
-    }
-
-  </script>
+  <script src="script.js"></script>
 
 
 </body>
